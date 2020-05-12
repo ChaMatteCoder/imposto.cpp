@@ -7,6 +7,7 @@ int main()
 
  double ganhoSalario, ganhoServicos, ganhoCapital, gastoMedico, gastoEducacao;
  double impostoSalario, impostoServico, impostoCapital;
+ double maximoDedutivel, gastosDedutiveis, impostoBruto;
 
  // 1 LEITURA DOS DADOS:
 
@@ -39,7 +40,19 @@ impostoServico = ganhoServicos * 0.15;
 
 impostoCapital = ganhoCapital * 0.20;
 
-// 3 RELATORIO
+// 3 CALCULOS DAS DEDUCOES:
+
+impostoBruto = impostoSalario + impostoServico + impostoCapital;
+
+maximoDedutivel = impostoBruto * 0.30;
+
+gastosDedutiveis = gastoEducacao + gastoMedico;
+
+
+
+
+
+// 4 RELATORIO:
 
  cout << fixed << setprecision(2);
  cout << endl << "RELATORIO DE IMPOSTO DE RENDA" << endl << endl;
@@ -47,5 +60,15 @@ impostoCapital = ganhoCapital * 0.20;
  cout << "Imposto sobre salario: " << impostoSalario << endl;
  cout << "Imposto sobre servicos: " << impostoServico << endl;
  cout << "Imposto sobre ganho de capital: " << impostoCapital << endl;
+
+ cout << endl << "DEDUCOES: " << endl;
+ cout << "Maximo dedutivel: " << maximoDedutivel << endl;
+ cout << "Gastos dedutiveis: " << gastosDedutiveis << endl;
+
+
+
+
+
+
     return 0;
 }
